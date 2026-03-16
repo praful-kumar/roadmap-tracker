@@ -59,3 +59,35 @@
   border-radius:6px;
   transition:width .3s ease;
 }
+.new-goal-btn{
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:13px;
+  cursor:pointer;
+  margin-left:14px;
+  transition:all .2s ease;
+}
+
+.new-goal-btn:hover{
+  background:#dc2626;
+}
+
+.progress-label > span{
+  font-weight:500;
+  padding-bottom: 5px;
+  color:#111827;
+}
+.new-goal-btn{
+    margin-top: 5px;
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:8px;
+  font-size:12px;
+  cursor:pointer;
+  transition:all .2s ease;
+}

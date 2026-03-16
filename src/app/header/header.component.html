@@ -16,6 +16,42 @@
       <div class="progress-fill" [style.width.%]="pct()"></div>
     </div>
 
+    <!-- NEW GOAL BUTTON -->
+    <button class="new-goal-btn" (click)="openConfirm()">
+      Setup New Goal
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- CONFIRMATION MODAL -->
+
+<div *ngIf="showConfirm()" class="confirm-overlay">
+
+  <div class="confirm-box">
+
+    <div class="confirm-title">
+      Setup New Goal
+    </div>
+
+    <div class="confirm-text">
+      This will delete your current roadmap and progress.
+    </div>
+
+    <div class="confirm-actions">
+
+      <button class="btn-cancel" (click)="closeConfirm()">
+        Cancel
+      </button>
+
+      <button class="btn-confirm" (click)="confirmReset()">
+        Continue
+      </button>
+
+    </div>
+
   </div>
 
 </div>

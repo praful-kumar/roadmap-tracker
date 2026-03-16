@@ -8,9 +8,9 @@
   </div>
 </div> -->
 
-<app-upload-roadmap *ngIf="!hasRoadmap"></app-upload-roadmap>
+<app-upload-roadmap *ngIf="!hasRoadmap()"></app-upload-roadmap>
 
-<div *ngIf="hasRoadmap" class="app-shell">
+<div *ngIf="hasRoadmap()" class="app-shell">
   <app-sidebar class="sidebar"></app-sidebar>
 
   <div style="flex:1">

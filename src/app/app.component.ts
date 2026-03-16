@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -15,23 +15,28 @@ import { RoadmapService } from './services/roadmap.service';
     RouterOutlet,
     HeaderComponent,
     SidebarComponent,
-    UploadRoadmapComponent   // 🔹 IMPORTANT
+    UploadRoadmapComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  hasRoadmap = false;
 
-  constructor(private roadmapService: RoadmapService) {}
+  roadmapService = inject(RoadmapService);
 
-  ngOnInit() {
+  /* reactive state */
+  hasRoadmap = computed(() => {
+
+    const roadmap = this.roadmapService.roadmap();
+
+    return roadmap && roadmap.length > 0;
+
+  });
+
+  ngOnInit(){
 
     this.roadmapService.loadRoadmap();
 
-    this.hasRoadmap = !!localStorage.getItem('roadmap-data');
-
   }
- 
 
 }
