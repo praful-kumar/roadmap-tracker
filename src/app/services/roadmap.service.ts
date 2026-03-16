@@ -21,4 +21,14 @@ export class RoadmapService {
 
   }
 
+  resetRoadmap(){
+
+  localStorage.removeItem('roadmap-data');
+  localStorage.removeItem('roadmap-completions-v1');
+
+  this.roadmap.set([]);
+  this.config.set(null);
+
+}
+
 }
