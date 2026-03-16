@@ -1,0 +1,21 @@
+<div class="app-header">
+
+  <div class="header-left">
+    <h2 class="app-title">{{config()?.title}}</h2>
+    <div class="app-goal">{{config()?.goal}}</div>
+  </div>
+
+  <div class="header-right">
+
+    <div class="progress-label">
+      Overall Progress
+      <span>{{ pct() }}%</span>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-fill" [style.width.%]="pct()"></div>
+    </div>
+
+  </div>
+
+</div>

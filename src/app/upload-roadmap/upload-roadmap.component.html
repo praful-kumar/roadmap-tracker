@@ -1,0 +1,71 @@
+
+
+<div class="upload-page">
+
+  <!-- LEFT SIDE -->
+  <div class="upload-section">
+
+    <h2 class="section-title">
+      Upload Roadmap JSON
+    </h2>
+
+    <p class="section-subtitle">
+      Upload a roadmap JSON file to start tracking your learning progress.
+    </p>
+
+    <div class="upload-box">
+      <label>
+        <input
+          type="file"
+          accept=".json"
+          (change)="onFileSelected($event)"
+      />
+
+      <div class="upload-icon">📂</div>
+
+      <div class="upload-text">
+        Click or Drag JSON File
+      </div>
+
+      <div class="upload-hint">
+        Only .json files supported
+      </div>
+</label>
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE -->
+  <div class="prompt-section">
+
+    <h2 class="section-title">
+      Generate Roadmap using AI
+    </h2>
+
+    <p class="section-subtitle">
+      Use the prompt below in ChatGPT / Claude / Gemini to generate a roadmap JSON file.
+    </p>
+
+    <div class="prompt-box">
+
+      <pre>{{prompt}}</pre>
+
+      <button class="copy-btn" (click)="copyPrompt()">
+        📋 Copy Prompt
+      </button>
+
+    </div>
+
+    <div class="prompt-steps">
+
+      <div class="step">1️⃣ Copy the prompt</div>
+      <div class="step">2️⃣ Paste it into ChatGPT</div>
+      <div class="step">3️⃣ Download the JSON file</div>
+      <div class="step">4️⃣ Upload it here</div>
+
+    </div>
+
+  </div>
+
+</div>

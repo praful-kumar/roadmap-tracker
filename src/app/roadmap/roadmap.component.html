@@ -1,0 +1,10 @@
+<div class="roadmap">
+
+  <app-week
+    *ngFor="let w of roadmap"
+    [week]="w"
+    [expanded]="activeWeek === w.week"
+    (toggle)="toggleWeek(w.week)">
+  </app-week>
+
+</div>

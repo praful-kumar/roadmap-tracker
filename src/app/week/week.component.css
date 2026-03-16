@@ -1,0 +1,140 @@
+/* ========================= */
+/* Week Card */
+/* ========================= */
+
+.week-card{
+  background:#ffffff;
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  transition:all .2s ease;
+  width:100%;
+  box-sizing:border-box;
+}
+
+.week-card:hover{
+  transform:translateY(-1px);
+}
+
+
+/* ========================= */
+/* Header */
+/* ========================= */
+
+.week-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  gap:10px;
+}
+
+.week-header:hover{
+  opacity:0.9;
+}
+
+
+/* ========================= */
+/* Title Section */
+/* ========================= */
+
+.week-title{
+  font-weight:700;
+  font-size:16px;
+  color:#111827;
+  line-height:1.3;
+}
+
+.week-focus{
+  font-size:13px;
+  color:#6b7280;
+  margin-top:2px;
+}
+
+
+/* ========================= */
+/* Toggle Arrow */
+/* ========================= */
+
+.week-toggle{
+  font-size:18px;
+  color:#6b7280;
+  flex-shrink:0;
+}
+
+
+/* ========================= */
+/* Week Content */
+/* ========================= */
+
+.week-content{
+  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+
+/* ========================= */
+/* Tablet Responsive */
+/* ========================= */
+
+@media (max-width:900px){
+
+  .week-card{
+    padding:14px;
+  }
+
+  .week-title{
+    font-size:15px;
+  }
+
+}
+
+
+/* ========================= */
+/* Mobile Responsive */
+/* ========================= */
+
+@media (max-width:600px){
+
+  .week-card{
+    padding:12px;
+    margin-bottom:14px;
+  }
+
+  .week-header{
+    align-items:flex-start;
+  }
+
+  .week-title{
+    font-size:14px;
+  }
+
+  .week-focus{
+    font-size:12px;
+  }
+
+  .week-toggle{
+    font-size:16px;
+  }
+
+}
+
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media (max-width:420px){
+
+  .week-card{
+    padding:10px;
+  }
+
+  .week-content{
+    gap:8px;
+  }
+
+}

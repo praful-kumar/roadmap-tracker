@@ -1,0 +1,23 @@
+<!-- <div class="app-shell">
+  <app-sidebar class="sidebar"></app-sidebar>
+  <div style="flex:1">
+    <app-header></app-header>
+    <div style="padding:18px">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div> -->
+
+<app-upload-roadmap *ngIf="!hasRoadmap"></app-upload-roadmap>
+
+<div *ngIf="hasRoadmap" class="app-shell">
+  <app-sidebar class="sidebar"></app-sidebar>
+
+  <div style="flex:1">
+    <app-header></app-header>
+
+    <div style="padding:18px">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

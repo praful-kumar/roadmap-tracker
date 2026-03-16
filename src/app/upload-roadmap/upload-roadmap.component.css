@@ -1,0 +1,204 @@
+/* Page Layout */
+.upload-page{
+  display:flex;
+  gap:40px;
+  padding:40px;
+  min-height:100vh;
+  background:#f8fafc;
+  max-width:100%;
+  box-sizing:border-box;
+}
+
+/* LEFT SIDE — Desktop */
+.upload-section{
+  flex:0 0 25%;
+  background:white;
+  border-radius:14px;
+  padding:32px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* RIGHT SIDE — Desktop */
+.prompt-section{
+  flex:0 0 50%;
+  background:white;
+  border-radius:14px;
+  padding:32px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Titles */
+.section-title{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.section-subtitle{
+  font-size:13px;
+  color:#6b7280;
+  margin-bottom:20px;
+}
+
+/* Upload Box */
+.upload-box{
+  border:2px dashed #6366f1;
+  border-radius:12px;
+  padding:60px 20px;
+  text-align:center;
+  cursor:pointer;
+  transition:all .25s ease;
+  background:#fafbff;
+}
+
+.upload-box:hover{
+  background:#eef2ff;
+  border-color:#4f46e5;
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(79,70,229,0.1);
+}
+
+.upload-box input{
+  display:none;
+}
+
+.upload-icon{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.upload-text{
+  font-weight:600;
+  font-size:15px;
+  color:#111827;
+}
+
+.upload-hint{
+  font-size:12px;
+  color:#9ca3af;
+  margin-top:6px;
+}
+
+/* Prompt Box */
+.prompt-box{
+  background:#111827;
+  color:white;
+  padding:22px;
+  border-radius:10px;
+  position:relative;
+  max-height:360px;
+  overflow:auto;
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* Copy Button */
+.copy-btn{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:#6366f1;
+  border:none;
+  color:white;
+  padding:7px 12px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:12px;
+  transition:all .2s ease;
+}
+
+.copy-btn:hover{
+  background:#4f46e5;
+}
+
+/* Steps */
+.prompt-steps{
+  margin-top:22px;
+}
+
+.step{
+  font-size:14px;
+  margin-bottom:8px;
+  color:#374151;
+}
+
+
+/* ========================= */
+/* TABLET (iPad / Tabs) */
+/* ========================= */
+
+@media (max-width:1200px){
+
+  .upload-page{
+    gap:24px;
+    padding:24px;
+  }
+
+  .upload-section{
+    flex:0 0 35%;
+  }
+
+  .prompt-section{
+    flex:0 0 65%;
+  }
+
+  .upload-box{
+    padding:40px 15px;
+  }
+
+}
+
+
+/* ========================= */
+/* MOBILE (Phones) */
+/* ========================= */
+
+@media (max-width:768px){
+
+  .upload-page{
+    flex-direction:column;
+    padding:20px;
+    gap:20px;
+  }
+
+  .upload-section,
+  .prompt-section{
+    flex:1;
+    width:100%;
+    padding:24px;
+  }
+
+  .upload-box{
+    padding:35px 10px;
+  }
+
+  .upload-icon{
+    font-size:36px;
+  }
+
+  .section-title{
+    font-size:18px;
+  }
+
+}
+
+
+/* ========================= */
+/* SMALL MOBILE (iPhone SE etc.) */
+/* ========================= */
+
+@media (max-width:480px){
+
+  .upload-page{
+    padding:16px;
+  }
+
+  .upload-box{
+    padding:30px 10px;
+  }
+
+  .prompt-box{
+    font-size:12px;
+  }
+
+}

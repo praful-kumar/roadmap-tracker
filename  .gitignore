@@ -1,0 +1,26 @@
+Node
+
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+Angular build
+
+dist/
+tmp/
+out-tsc/
+coverage/
+
+IDE, OS
+
+.vscode/
+.DS_Store
+*.log
+.idea/
+*.suo
+.ntvs
+*.njsproj
+*.sln
+*.sw?
+

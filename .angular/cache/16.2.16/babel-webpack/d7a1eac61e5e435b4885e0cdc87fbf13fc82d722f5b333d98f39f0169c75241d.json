@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * This file can be used to add polyfills needed by Angular.\n * It's intentionally minimal for this lightweight scaffold.\n */\n/* Add global polyfills if needed */\nimport 'zone.js';","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

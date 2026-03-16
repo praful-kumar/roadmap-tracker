@@ -1,0 +1,78 @@
+<div class="dashboard">
+
+  <!-- Stats Cards -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div class="stat-label">Total Tasks</div>
+      <div class="stat-value">{{ total() }}</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Completed</div>
+      <div class="stat-value">{{ done() }}</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Remaining</div>
+      <div class="stat-value">{{ remaining() }}</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Overall Progress</div>
+      <div class="stat-value">{{ percent() }}%</div>
+
+      <div class="progress-container">
+        <div class="progress-fill" [style.width.%]="percent()"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Weekly Progress -->
+  <div class="card">
+    <h4 class="section-title">Weekly Progress</h4>
+
+    <div class="progress-row" *ngFor="let w of weekly">
+
+      <div class="progress-label">
+        {{ w.week }}
+        <span class="muted">({{ w.done }}/{{ w.total }})</span>
+      </div>
+
+      <div class="progress-percent">{{ w.percent }}%</div>
+
+      <div class="progress-container">
+        <div class="progress-fill" [style.width.%]="w.percent"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Topic Progress -->
+  <div class="card">
+    <h4 class="section-title">Topic Progress</h4>
+
+    <div class="topic-row" *ngFor="let t of topics">
+
+      <div class="topic-label">
+        {{ t.topic }}
+        <span class="muted">({{ t.done }}/{{ t.total }})</span>
+      </div>
+
+      <div class="topic-bar">
+        <div class="progress-container">
+          <div class="progress-fill" [style.width.%]="t.percent"></div>
+        </div>
+      </div>
+
+      <div class="topic-percent">{{ t.percent }}%</div>
+
+    </div>
+
+  </div>
+
+</div>

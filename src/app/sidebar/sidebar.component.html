@@ -1,0 +1,45 @@
+<!-- MOBILE TOGGLE BUTTON -->
+<button class="mobile-menu-btn" (click)="toggleMobileSidebar()">
+  ☰
+</button>
+
+
+<div class="sidebar" [class.mobile-open]="mobileOpen()">
+
+  <div class="sidebar-title">Navigation</div>
+
+  <a routerLink="/" class="nav-link" (click)="closeMobileSidebar()">
+    Dashboard
+  </a>
+
+  <div class="sidebar-section">Weeks</div>
+
+  <div *ngFor="let w of roadmap()" class="week-group">
+
+    <div class="week-header" (click)="toggleWeek(w.week)">
+      <span>{{ w.week }}</span>
+      <span class="arrow">
+        {{ expandedWeek() === w.week ? '▾' : '▸' }}
+      </span>
+    </div>
+
+    <ul *ngIf="expandedWeek() === w.week" class="day-list">
+
+      <li *ngFor="let d of w.days">
+
+        <a
+  routerLink="/roadmap"
+  [fragment]="w.week + '-' + d.day"
+  class="day-link"
+  (click)="handleDayClick(d.day, w.week)"
+>
+          {{ d.day }}
+        </a>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+</div>

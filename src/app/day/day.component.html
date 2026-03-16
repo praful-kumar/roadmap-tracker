@@ -1,0 +1,24 @@
+<div class="day-card" [attr.id]="week + '-' + day.day">
+
+<div class="day-header" (click)="onToggle($event)">
+    <div>
+      <div class="day-title">{{day.day}}</div>
+      <div class="muted">{{day.concept}}</div>
+    </div>
+
+    <div>{{expanded ? '▾' : '▸'}}</div>
+
+  </div>
+
+  <div *ngIf="expanded" class="day-content">
+
+    <app-task
+      *ngFor="let t of day.tasks"
+      [task]="t"
+      [week]="week"
+      [day]="day.day">
+    </app-task>
+
+  </div>
+
+</div>

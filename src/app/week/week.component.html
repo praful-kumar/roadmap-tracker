@@ -1,0 +1,25 @@
+<div class="week-card">
+
+  <div class="week-header" (click)="toggle.emit()">
+
+    <div>
+      <div class="week-title">{{week.week}}</div>
+      <div class="muted">{{week.focus}}</div>
+    </div>
+
+    <div>{{expanded ? '▾' : '▸'}}</div>
+
+  </div>
+
+  <div *ngIf="expanded" class="week-content">
+
+<app-day
+  *ngFor="let d of week.days"
+  [day]="d"
+  [week]="week.week"
+  [expanded]="activeDay === d.day"
+  (toggle)="toggleDay(d.day)">
+</app-day>
+  </div>
+
+</div>
